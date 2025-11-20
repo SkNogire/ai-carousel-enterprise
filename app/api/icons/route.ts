@@ -1,13 +1,16 @@
+import { NextRequest, NextResponse } from "next/server";
 import { openai } from "@/lib/openai";
 
-export async function POST(req){
+export async function POST(req: NextRequest) {
   const { prompt } = await req.json();
 
   const img = await openai.images.generate({
-    model:"gpt-image-1",
-    prompt:`minimal flat vector icon of ${prompt}`,
-    size:"512x512"
+    model: "gpt-image-1",
+    prompt,
+    size: "1024x1024"
   });
 
-  return Response.json({ url: img.data[0].url });
+  return NextResponse.json({
+    url: img.data[0].url
+  });
 }
