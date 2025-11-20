@@ -1,0 +1,30 @@
+{
+  "name": "ai-carousel-enterprise-global",
+  "version": "7.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "render-video": "remotion render src/remotion/index.tsx out/carousel.mp4"
+  },
+  "dependencies": {
+    "firebase": "latest",
+    "framer-motion": "latest",
+    "next": "latest",
+    "openai": "latest",
+    "puppeteer": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "remotion": "latest",
+    "sharp": "latest",
+    "stripe": "latest",
+    "tailwindcss": "latest",
+    "zustand": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.6",
+    "typescript": "^5.9.3"
+  }
+}
